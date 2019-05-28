@@ -34,4 +34,10 @@ public class ShopsController {
         System.out.println("Going to call student service to get data!");
         return customerServiceDelegate.callCustomerServiceAndGetCustomerByName(name);
     }
+	
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	public String getTest() {;
+			return "{\"status\":\"this is test endpoint ot validate if api is running\"}";
+	}
+
 }
