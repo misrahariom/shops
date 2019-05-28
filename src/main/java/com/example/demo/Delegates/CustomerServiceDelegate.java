@@ -34,7 +34,7 @@ public class CustomerServiceDelegate {
 		 * HttpMethod.GET , null , new ParameterizedTypeReference<String>() { },
 		 * schoolname).getBody();
 		 */
-        String response = restTemplate.getForObject("http://localhost:8082/customers/showall/", String.class);
+        String response = restTemplate.getForObject("http://customers:8082/customers/showall/", String.class);
         System.out.println("Response Received as " + response + " -  " + new Date());
  
         return response;
@@ -46,7 +46,7 @@ public class CustomerServiceDelegate {
     	 
         System.out.println("Getting Customers details for all customers");
 		
-		String response = restTemplate.exchange("http://localhost:8082/customers/firstname" ,
+		String response = restTemplate.exchange("http://customers:8082/customers/firstname" ,
 		HttpMethod.GET , null , new ParameterizedTypeReference<String>() { },
 		firstName).getBody();
         System.out.println("Response Received as " + response + " -  " + new Date());
@@ -64,7 +64,7 @@ public class CustomerServiceDelegate {
 		 * + " Service will be back shortly - " + new Date();
 		 */
         
-        String response = restTemplate.getForObject("http://localhost:8081/hello/", String.class);
+        String response = restTemplate.getForObject("http://demo:8081/hello/", String.class);
         System.out.println("Response Received as " + response + " -  " + new Date());
         return response;
     }
@@ -79,7 +79,7 @@ public class CustomerServiceDelegate {
 		 * + " Service will be back shortly - " + new Date();
 		 */
         
-        String response = restTemplate.getForObject("http://localhost:8081/hello/", String.class);
+        String response = restTemplate.getForObject("http://demo:8081/hello/", String.class);
         System.out.println("Response Received as " + response + " -  " + new Date());
         return response;
     }
