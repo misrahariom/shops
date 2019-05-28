@@ -16,6 +16,6 @@ services:
    - 8081:8081
  customer-service:
   image: hmisra/customer-api:latest
-  container_name: cusomters
+  container_name: customers
   ports:
   - 8082:8082
