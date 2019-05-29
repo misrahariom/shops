@@ -23,7 +23,7 @@ services:
   links:
    - mongo
  mongo:
-  image: mongo
+  image: mongo:3.2.4
   container_name: customers-mongo
   ports:
    - 27017:27017
