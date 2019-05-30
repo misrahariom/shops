@@ -1,0 +1,53 @@
+{
+  "Services": {
+    "customer-service": {
+      "Image": "hmisra/customer-api@sha256:6d5e6c46a208365cf6dd70a7c76d0c676ac54588626e8f1f5d61e77b4f936362",
+      "Networks": [
+        "default"
+      ],
+      "Ports": [
+        {
+          "Port": 8082,
+          "Protocol": "tcp"
+        }
+      ]
+    },
+    "demo-service": {
+      "Image": "hmisra/demo@sha256:d85b926f7c06c115990298ac6db9cc58f16f7b32eea64cfd8272e1d4ef0e1ffb",
+      "Networks": [
+        "default"
+      ],
+      "Ports": [
+        {
+          "Port": 8081,
+          "Protocol": "tcp"
+        }
+      ]
+    },
+    "mongo": {
+      "Image": "mongo@sha256:f4f60b08b94248628e5a2776e4569553a3db3ba9f4a6367fe52c83ca0ace5b30",
+      "Networks": [
+        "default"
+      ],
+      "Ports": [
+        {
+          "Port": 27017,
+          "Protocol": "tcp"
+        }
+      ]
+    },
+    "shops-service": {
+      "Image": "hmisra/shops@sha256:b5b8c3e84767f680f591f6c1ed862ca5cd499936c1e22c736b50bc0bc27bb1c9",
+      "Networks": [
+        "default"
+      ],
+      "Ports": [
+        {
+          "Port": 8083,
+          "Protocol": "tcp"
+        }
+      ]
+    }
+  },
+  "Version": "0.1"
+}
